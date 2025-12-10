@@ -4,6 +4,8 @@ source .env
 
 YEAR=2025
 day="$1"
+day=${day#day}
+day=${day%/}
 
 if [[ -z $day ]]; then
     day="$(date "+%-d")"
